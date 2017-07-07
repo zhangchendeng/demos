@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>简单表单实现</title>
+    <style type="text/css">
+        form{
+            display: inline-block;
+            padding: 20px;
+            margin: 50px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+
+<form name="demo" method="post" action="save.php" enctype="application/x-www-form-urlencoded" autocomplete="on">
+    <p><label>姓名：<input type="text" name="name" placeholder="用户名"></label></p>
+    <p><label>密码：<input type="password" name="password"></ins></label></p>
+    <p>
+        <label>性别：</label>
+        <label><input type="radio" name="sex" value="男" checked="checked">男</lable>
+        <label><input type="radio" name="sex" value="女">女</label>
+    </p>
+    <p>
+        <label>取向：</label>
+        <label><input type="radio" name="orientation" value="男">男</label>
+        <label><input type="radio" name="orientation" value="女" checked="checked"></label>
+    </p>
+    <p>
+        <label>爱好：</label>
+        <label><input type="checkbox" name="hoppy" value="dota">dota</label>
+        <label><input type="checkbox" name="hoppy" value="旅游" checked="checked">旅游</label>
+        <label><input type="checkbox" name="hoppy" value="宠物" checked="checked">宠物</label>
+    </p>
+    <p><label>评论：<textarea rows="10" cols="50" placeholder="ddd"></textarea></label></p>
+    <label>我的car：
+        <select>
+            <option value="萨博" selected="selected">萨博</option>
+            <option value="奥迪">奥迪</option>
+            <option value="奔驰">奔驰</option>
+        </select>
+    </label>
+    <input type="submit" name="submit" value="提交">
+</form>
+
+</body>
+</html>
