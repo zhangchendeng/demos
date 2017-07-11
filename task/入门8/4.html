@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>任务8：代码-03</title>
+    <style type="text/css">
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    body {
+        font-family: arial;
+    }
+
+    .layout {
+        width: 600px;
+        margin: 10px auto;
+    }
+
+    .layout > .h-table {
+        width: 100%;
+        margin-top: 30px;
+        border-collapse: collapse;
+    }
+
+    .layout > .v1 {
+        border: 1px solid #ccc; 
+    }
+
+    .h-table tr {
+        text-align: left;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .h-table tr:nth-child(even) {
+        background-color: #f1f1f1;
+    }
+
+    .h-table th {
+        padding: 8px;
+        color: #000;
+        font-weight: bold;
+    }
+
+    .v1 th {
+        color: #fff;
+        background-color: #4caf50;
+    }
+
+    .h-table td {
+        padding: 8px;
+    }
+    </style>
+</head>
+<body>
+
+<div class="layout">
+    <table class="h-table v1">
+        <tbody>
+            <tr><th>First Name</th><th>Last Name</th><th>Points</th></tr>
+            <tr><td>Jill</td><td>Smith</td><td>50</td></tr>
+            <tr><td>Eve</td><td>Jackson</td><td>94</td></tr>
+            <tr><td>Adam</td><td>Johnson</td><td>67</td></tr>
+            <tr><td>Bo</td><td>Nilsson</td><td>50</td></tr>
+            <tr><td>Mike</td><td>Ross</td><td>35</td></tr>
+        </tbody>
+    </table>
+
+    <table class="h-table">
+        <tbody>
+            <tr><th>First Name</th><th>Last Name</th><th>Points</th></tr>
+            <tr><td>Jill</td><td>Smith</td><td>50</td></tr>
+            <tr><td>Eve</td><td>Jackson</td><td>94</td></tr>
+            <tr><td>Adam</td><td>Johnson</td><td>67</td></tr>
+            <tr><td>Bo</td><td>Nilsson</td><td>50</td></tr>
+            <tr><td>Mike</td><td>Ross</td><td>35</td></tr>
+        </tbody>
+    </table>
+</div>
+  
+</body>
+</html>
+
