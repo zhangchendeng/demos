@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>下拉表单</title>
+     <style type="text/css">
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    body {
+        font-family: arial;
+    }
+
+    .clearfix:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+
+    .layout {
+        width: 600px;
+        margin: 20px auto;
+    } 
+
+    .layout > .h-card {
+        padding-bottom: 16px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    .h-card > h2 {
+        /* 使用 line-height 也可以 */
+        padding: 15px 16px;
+        background-color: #009688;
+        color: #fff;
+    }
+
+    .h-card > form {
+        margin: 16px;
+    }
+
+    .h-card > form > div {
+        /* 对第一个 div 而言，和 form 垂直外边距叠加 */
+        margin-top: 16px;
+    }
+
+    .h-card > form label {
+        color: #757575;
+    }
+
+    .h-card > form input[type="text"],
+    .h-card > form textarea {
+        /* 变成块级元素，达到换行的效果 */
+        display: block;
+        width: 100%;
+        padding: 8px 0;
+        border: none;
+        border-bottom: 1px solid #808080;
+    }
+
+    .h-card > form textarea {
+        height: 60px;
+        /* 不允许横向拉伸 */
+        max-width: 100%;
+    }
+
+    /* 获得焦点时的效果 */
+    .h-card > form :focus {
+        outline: none;
+    }
+
+    .h-card > form .half {
+        float: left;
+        width: 50%;
+        line-height: 1.4;
+    }
+
+    .h-card > form input[type="submit"] {
+        padding: 8px 16px;
+        color: #fff;
+        border: none;
+        background-color: #009688;
+    }
+    </style>
+</head>
+<body>
+
+<div class="layout">
+    <div class="h-card">
+        <h2>信息收集表</h2>
+        <form action="sava.php" method="post">
+            <div>
+                <label for="name">姓名</label>
+                <input type="text" name="name" id="name">
+            </div>
+            <div>
+                <label for="qq">QQ</label>
+                <input type="text" name="qq" id="qq">
+            </div>
+            <div>
+                <label for="words">要说的话</label>
+                <textarea name="words" id="words"></textarea>
+            </div>
+            <div class="clearfix">
+                <div class="half">
+                    <label><input type="checkbox" name="drinks" value="Milk" checked="checked"> Milk</label>
+                    <br>
+                    <label><input type="checkbox" name="drinks" value="Sugar"> Sugar</label>
+                    <br>
+                    <label><input type="checkbox" name="drinks" value="Lemon"> Lemon</label>
+                </div>
+                <div class="half">
+                    <label><input type="radio" name="gender" value="Male" checked="checked"> Male</label>
+                    <br>
+                    <label><input type="radio" name="gender" value="Female"> Female</label>
+                </div>
+            </div>
+            <div>
+                <input type="submit" name="submit" value="提交">
+            </div>
+        </form>
+    </div>
+</div>
+  
+</body>
+</html>
+

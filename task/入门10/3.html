@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>模态框效果</title>
+     <style type="text/css">
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    body {
+        font-family: arial;
+    }
+
+    .layout {
+        width: 600px;
+        margin: 20px auto;
+    }
+
+    .layout > p {
+        font-size: 30px;
+        font-weight: bold;
+        line-height: 2em;
+    }
+
+    .layout > .h-modal {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.4)
+    }
+
+    .h-modal > .panel {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 600px;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    .h-modal > .panel > header,
+    .h-modal > .panel > footer {
+        padding: 16px;
+        background-color: #009688;
+        color: #fff;
+    }
+
+    .h-modal > .panel .close {
+        float: right;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    .h-modal > .panel > main {
+        padding: 25px 16px;
+        line-height: 2em;
+    }
+    </style>
+</head>
+<body>
+
+<div class="layout">
+    <p>这是页面内容</p>
+    <p>这是页面内容</p>
+    <p>这是页面内容</p>
+
+    <div class="h-modal">
+        <div class="panel">
+            <header>
+                <span class="close">x</span>
+                <h3>头部</h3>
+            </header>
+            <!-- main 标签规定文档的主要内容。该元素中的内容对于文档来说应当是唯一的 -->
+            <main>
+                <p>这是内容</p>
+                <p>这是内容</p>
+            </main>
+            <footer>
+                <p>尾部</p>
+            </footer>
+        </div>
+    </div>
+</div>
+  
+</body>
+</html>
+
