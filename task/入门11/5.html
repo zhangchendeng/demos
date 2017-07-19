@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>小卡片</title>
+     <style type="text/css">
+    * {
+        padding: 0;
+        margin: 0;
+        /*border: 1px solid red;*/
+    }
+
+    body {
+        font-family: arial;
+    }
+
+    .layout {
+        width: 800px;
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        margin: 20px auto;
+
+        position: relative;
+    }
+
+    .layout > .right {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+
+        /*float: right;*/
+        /* 
+        用 height: 100%; 设置拿不到父元素高度，因为 .layout 的高度是由内容撑起来的
+        最开始为 0，所以 height: 100%; 获取到的还是 0
+        */
+        /*height: 100%;  */
+    }
+
+    .layout > .right > img{
+        width: 180px;
+        height: 130px;
+        border-radius: 8px;
+        vertical-align: middle;
+    }
+
+    .layout > .left {
+        padding: 15px 0;
+        margin-right: 200px;
+    }
+
+    .left > .user > .avator {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 1px solid #ccc;
+        vertical-align: middle;
+        margin-right: 10px;
+    }
+
+    .left > .user > .name {
+        font-size: 17px;
+        color: #4f453a;
+        vertical-align: middle;
+        margin-right: 8px;
+    }
+
+    .left > .user > .time {
+        font-size: 15px;
+        color: #96979a;
+        vertical-align: middle;
+    }
+
+    .left > .detail > h2 {
+        color: #303031;
+        padding-top: 10px;
+    }
+
+    .left > .detail > p {
+        color: #2f2f2f;
+        padding: 10px 0;
+        line-height: 2em;
+
+        /* 超出文本显示 省略号 */
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    .detail > .tag > button {
+        color: #ea705b;
+        border: 1px solid;
+        border-radius: 3px;
+        padding: 2px 5px;
+        margin-right: 10px;
+        background-color: #fff;
+    }
+    </style>
+</head>
+<body>
+
+<div class="layout">
+    <div class="right">
+        <img src="http://7xpvnv.com2.z0.glb.qiniucdn.com/283a4100-10cd-4208-a3b5-4030ec03acf6">
+    </div>
+    <div class="left">
+        <div class="user">
+            <img class="avator" src="http://7xpvnv.com2.z0.glb.qiniucdn.com/283a4100-10cd-4208-a3b5-4030ec03acf6">
+            <span class="name">林慕之</span>
+            <span class="time">8小时前</span>
+        </div>
+        <div class="detail">
+            <h2>坚持“读书”这些年，人生真是太值了！</h2>
+            <p>2017.5.27 | NO.18 前几年，在国内大学的朋友给我发来微信。她说：5年前，刚进大学的时候，我们是一样的起点，如果当时我和你一样坚持不断地坚持学习，前几年在国内大学的朋友给我发来微信。她说几年</p>
+            <div class="tag">
+                <button type="button">读书</button>
+                <button type="button">反思</button>
+            </div>
+        </div>
+    </div>
+</div>
+  
+</body>
+</html>
+

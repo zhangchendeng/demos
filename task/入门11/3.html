@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>第3列第1个布局</title>
+    <style type="text/css">
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+   .clearfix:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+
+    .wrapper {
+        /* 2、采用定位的方式 */
+        /*position: relative;*/
+
+        /* 3、采用 flex 的方式 */
+        /*display: flex;*/
+
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: pink;
+    }
+
+    .wrapper > .menu {
+        /* 1、采用浮动的方式 */
+        float: left;
+
+        /*position: absolute;*/
+        /*top: 0;*/
+        /*left: 0;*/
+
+        /*order: 1;*/
+
+        width: 150px;
+        height: 400px;
+        background-color: lightgreen;
+    }
+
+    .wrapper > .aside {
+        float: right;
+
+        /*position: absolute;*/
+        /*top: 0;*/
+        /*right: 0;*/
+
+        /*order: 3;*/
+
+        width: 200px;
+        height: 300px;
+        background: teal;      
+    }
+
+    .wrapper > .main {
+       margin-left: 160px;
+       margin-right: 210px;
+
+       /*flex-grow: 1;*/
+       /*order: 2;*/
+       /*margin: 0 10px;*/
+
+       height: 600px;
+       background: orange;
+    }
+    </style>
+</head>
+<body>
+<div class="wrapper clearfix">
+    <!-- 为什么不是 main 在前面？还是跟渲染顺序有关 -->
+    <div class="menu">menu</div>
+    <aside class="aside">aside</aside>
+    <main class="main">main</main>
+</div>
+</body>
+</html>
+

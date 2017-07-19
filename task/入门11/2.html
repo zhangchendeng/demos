@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>第2列第1个布局</title>
+    <style type="text/css">
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+   .clearfix:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+
+    .content {
+        /* 2、采用定位的方式 */
+        /*position: relative;*/
+
+        /* 3、采用flex的方式 */
+        /*display: flex;*/
+
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: pink;
+    }
+
+    .content > .aside {
+        /* 1、采用浮动的方式 */
+        float: left;
+
+        /* 如果侧栏在右边呢？注意：页面元素的渲染顺序 */
+        /*float: right;*/
+
+        /*position: absolute;*/
+        /*left: 0;*/
+        /*right: 0;*/
+
+        width: 200px;
+        height: 400px;
+        background: teal;      
+    }
+
+    .content > .main {
+       margin-left: 210px;
+       /*margin-right: 210px;*/
+
+       /*margin-left: 10px;*/
+       /*flex-grow: 1;*/
+
+       height: 600px;
+       background: orange;
+    }
+    </style>
+</head>
+<body>
+<div class="content clearfix">
+    <aside class="aside">aside</aside>
+    <main class="main">content</main>
+</div>
+</body>
+</html>
+
