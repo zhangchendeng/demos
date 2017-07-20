@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>任务3：每种效果只使用一个 html 标签来实现</title>
+    <style type="text/css">
+    body {
+        padding: 30px;
+    }
+
+    .wrapper {
+        position: relative;
+        width: 150px;
+        height: 80px;
+        margin-bottom: 40px;
+        border: 1px solid #888;
+        background-color: #fff;
+    }
+
+    .wrapper:after {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 20px;
+    }
+
+    .wrapper:nth-child(1):after, 
+    .wrapper:nth-child(3):after
+    {
+        top: -11px;
+        left: 10px;
+        transform: rotateZ(45deg);
+        border-top: 1px solid #888;
+        border-left: 1px solid #888;
+        background-color: #fff;
+    }
+
+    .wrapper:nth-child(1):after {
+        z-index: -999;
+        background-color: #888;
+    }
+
+    .wrapper:nth-child(2):after {
+        top: -15px;
+        right: -15px;
+        width: 0;
+        height: 0;
+        transform: rotateZ(-135deg);
+        border: 15px solid transparent;
+        border-top-color: #f00;  
+    }
+    </style>
+</head>
+<body>
+<div class="wrapper"></div>
+<div class="wrapper"></div>
+<div class="wrapper"></div>
+</body>
+</html>
+

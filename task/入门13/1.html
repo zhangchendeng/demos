@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>垂直居中的几种形式</title>
+    <style type="text/css">
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    .wrapper {
+        margin-bottom: 20px;
+        background-color: pink;
+    }
+
+    .wrapper:nth-child(even) {
+        background-color: teal;
+        color: #fff;
+    }
+
+    .wrapper > :nth-child(n) {
+        border: 1px solid red;
+    }
+
+    .box1 {
+        line-height: 50px;
+    }
+
+    .box2,
+    .box3
+    {
+        padding: 20px 0;
+    }
+
+    .box4 {
+        display: table-cell;
+        height: 150px;
+        vertical-align: middle;
+    }
+
+    .box5 {
+        margin-top: 20px;
+        height: 150px;
+        font-size: 0;
+    }
+
+    .box5 > div {
+        display: inline-block;
+        vertical-align: middle; 
+        font-size: 15px;
+    }
+
+    .box5:after {
+        display: inline-block;
+        content: "";
+        height: 100%;
+        vertical-align: middle;
+    }
+
+    .box6 {
+        position: relative;
+        height: 100px;
+    }
+
+    .box6 > div {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .box7 {
+        display: flex;
+        height: 100px;
+        align-items: center;
+    }
+    </style>
+</head>
+<body>
+<div class="wrapper box1">
+    <span>内联元素：在父元素上设置 line-height</span>
+</div>
+
+<div class="wrapper box2">
+    <span>内联元素：在父元素上设置 上下padding</span>
+</div>
+
+<div class="wrapper box3">
+    <div>块状元素：在父元素上设置 上下padding</div>
+</div>
+
+<div class="wrapper box4">
+    <div>
+        <p>在父元素上设置 display: table-cell; vertical-align: middle; </p>
+        <p>设置为table-cell的div不能使用浮动或绝对定位，因为浮动或绝对定位会使元素具有块级元素特性，从而丧失了table-cell元素具有的垂直对齐的功能。</p>
+        <p>若需要浮动或绝对定位处理，则需要外面再套一层div</p>
+        <p>注意：table-cell 不可设置margin，但可以设置padding</p>
+    </div>
+</div>
+
+<div class="wrapper box5">
+    <div>
+        <p>对于 inline-block 元素，可以给其设置 vertical-align: middle;</p>
+        <p>再在父元素上设置伪元素，display: inline-block; content: ""; height: 100%; vertical-align: middle;</p>
+        <p>间距问题：父元素设置 font-size: 0; 子元素中再重新设置字体大小</p>
+    </div>
+</div>
+
+<div class="wrapper box6">
+    <div>absolute + transform，注意低版本IE不兼容</div>
+</div>
+
+<div class="wrapper box7">
+    <div>父元素设置 display: flex; align-items: center;</div>
+</div>
+</body>
+</html>
+
