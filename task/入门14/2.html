@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人简历</title>
+    <style type="text/css">
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    .resume {
+        width: 800px;
+        padding: 50px 30px 40px;
+        margin: 20px auto;
+        box-shadow: 0 0 4px 2px #ccc;
+        font-family: "Micrsoft Yahei", "\5FAE\8F6F\96C5\9ED1", sans-serif;
+        font-size: 15px;
+        line-height: 1.6;
+        overflow: hidden;
+    }
+
+    .resume h1 {
+        font-size: 20px;
+        margin-top: 20px;
+    }
+
+    .resume hr {
+        width: 400px;
+        height: 1px;
+        background-color: #ccc;
+        border: none;
+        margin-bottom: 10px;
+    }
+
+    .resume .timeline:before {
+        content: "";
+        position: absolute;
+        left: -30px;
+        top: 7px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #000;
+
+    }
+
+    .resume .timeline:after {
+        content: "";
+        position: absolute;
+        border-left: 1px solid #000;
+        height: 100%;
+        left: -26px;
+        top: 10px;
+    }
+
+    .resume .timeline {
+        position: relative;
+        padding-bottom: 10px;
+        margin-left: 50px;
+    }
+
+    .resume .timeline:last-child {
+        padding-bottom: 0;
+    }
+
+    .resume .light {
+        color: #cbd2d1;
+    }
+    
+    .resume > .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 30px;
+    }
+
+    .header > .head-portrait > img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        vertical-align: middle;
+    }
+
+    .header > .intro {
+        margin-left: -150px;
+    }
+
+    .header > .intro > p:first-child {
+        font-size: 30px;
+    }
+
+    .header > .contacts {
+        width: 300px;
+    }
+
+    .header > .contacts > h1 {
+        margin-top: 0;
+    }
+
+    .header > .contacts > hr {
+        height: 4px;
+        background-color: #000;
+    }
+
+    .header > .contacts .bold {
+        font-weight: bold;
+        margin-right: 20px;
+    }
+
+    .resume > .experience,
+    .resume > .education
+    {
+        overflow: hidden;
+    }
+
+    .resume > .footer {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .resume > .footer hr {
+        width: auto;
+    }
+
+    .resume > .footer .symbol:before {
+        content: "+";
+        position: absolute;
+        left: -35px;
+        width: 20px;
+        line-height: 20px;
+        border: 1px solid #000;
+        border-radius: 50%;
+        text-align: center;
+        font-weight: bolder;
+    }
+
+    .resume > .footer .symbol {
+        position: relative;
+        margin-left: 50px;
+        margin-top: 20px;
+    }
+
+    .footer > .activities {
+        width: 400px;
+    }
+
+    .footer > .skills {
+        width: 350px;
+    }
+
+    .footer > .skills .symbol {
+        display: inline-block;
+        width: 30%;
+    }
+    </style>
+</head>
+<body>
+<div class="resume">
+    <section class="header">
+        <div class="head-portrait">
+            <img src="http://touxiang.qqzhi.com/uploads/2012-11/1111014645789.jpg">
+        </div>
+        <div class="intro">
+            <p>哈士奇</p>
+            <p>前端开发</p>
+        </div>
+        <div class="contacts">
+            <h1>CONTACTS</h1>
+            <hr>
+            <p><span class="bold">A</span>某某地点</p>
+            <p><span class="bold">P</span>18112341234</p>
+            <p><span class="bold">E</span>xxxx@gmail.com</p>
+            <p><span class="bold">B</span>www.jianshu.com/u/xxxx</p>
+        </div>
+    </section>
+    <section class="experience">
+        <h1>WORK EXPERIENCE</h1>
+        <hr>
+        <div class="timeline">
+            <p>xxx公司实习／<span class="light">2012-2013</span></p>
+            <p>文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字</p>
+        </div>
+        <div class="timeline">
+            <p>xxx公司实习／<span class="light">2012-2013</span></p>
+            <p>文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字</p>
+        </div>
+        <div class="timeline">
+            <p>xxx公司实习／<span class="light">2012-2013</span></p>
+            <p>文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字</p>
+        </div>
+    </section>
+    <section class="education">
+        <h1>EDUCATION</h1>
+        <hr>
+        <div class="timeline">
+            <p>xxx公司实习／<span class="light">2012-2013</span></p>
+            <p class="light">文字文字文字文字</p>
+            <p>文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字</p>
+        </div>
+        <div class="timeline">
+            <p>xxx公司实习／<span>2012-2013</span></p>
+            <p class="light">文字文字文字文字</p>
+            <p>文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字</p>
+        </div>
+    </section>
+    <section class="footer">
+        <div class="activities">
+            <h1>EXTRA CURRICULAR ACTIVITIES</h1>
+            <hr>
+            <div class="symbol">
+                <p>文字文字</p>
+                <p>文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字</p>
+            </div>
+            <div class="symbol">
+                <p>文字文字</p>
+                <p>文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字</p>
+            </div>
+        </div>
+        <div class="skills">
+            <h1>PROFESIONAL SKILLS</h1>
+            <hr>
+            <div class="symbol">文字文字</div>
+            <div class="symbol">文字文字</div>
+            <div class="symbol">文字文字</div>
+            <div class="symbol">文字文字</div>
+            <div class="symbol">文字文字</div>
+            <div class="symbol">文字文字</div>
+        </div>
+    </section>
+</div>
+</body>
+</html>
+
