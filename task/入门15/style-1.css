@@ -1,0 +1,373 @@
+@font-face {
+  font-family: 'iconfont';  
+  src: url('http://at.alicdn.com/t/font_351951_e0rvxad5a8m2t9.eot');
+  src: url('http://at.alicdn.com/t/font_351951_e0rvxad5a8m2t9.eot?#iefix') format('embedded-opentype'),
+  url('http://at.alicdn.com/t/font_351951_e0rvxad5a8m2t9.woff') format('woff'),
+  url('http://at.alicdn.com/t/font_351951_e0rvxad5a8m2t9.ttf') format('truetype'),
+  url('http://at.alicdn.com/t/font_351951_e0rvxad5a8m2t9.svg#iconfont') format('svg');
+}
+
+* {
+    /*border: 1px solid red;*/
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #333;
+    background-color: #fff;
+    margin: 0;
+}
+
+ul, li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.layout {
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn {
+    padding: 20px 40px;
+    font-size: 18px;
+    font-weight: 700;
+    background-color: #fed136;
+    border-radius: 5px;
+    color: #fff;
+    border: none;
+}
+
+.btn:hover {
+    background-color: #fec503;
+}
+
+.text-muted {
+    color: #777;
+}
+
+
+
+.navbar {
+    position: absolute;
+    width: 100%;
+    padding: 25px 0;
+    background-color: transparent;
+}
+
+.navbar > .navbar-layout {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar-layout > .navbar-header {
+    font-size: 2em;
+    color: #fed136;
+}
+
+.navbar-layout > .navbar-nav {
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.navbar-nav > li > a {
+    padding: 0 15px;
+}
+
+.navbar-nav > li > a:hover {
+    color: #fed136;
+}
+
+
+
+header {
+    background-image: url(http://book.jirengu.com/jirengu-inc/jrg-tehui/homework/%E8%8B%A5%E6%84%9A/16/img/header-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: #fff;
+}
+
+header .intro-text {
+    padding-top: 300px;
+    padding-bottom: 200px;
+}
+
+.intro-text > .intro-text-in {
+    font-size: 40px;
+    font-style: italic;
+}
+
+.intro-text > .intro-heading {
+    font-size: 75px;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+
+
+section {
+    padding: 150px 0;
+    text-align: center;
+}
+
+section .section-heading {
+    font-size: 40px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+section .section-subheading {
+    font-size: 16px;
+    font-style: italic;
+    margin-bottom: 75px;
+}
+
+
+
+.services-items {
+    display: flex;
+    justify-content: space-between;
+}
+
+.services-items > .services-item + .services-item {
+    margin-left: 30px;
+}
+
+.services-items > .services-item > .services-item-image {
+    display: inline-block;
+    width: 100px;
+    line-height: 100px;
+    background-color: #fed136;
+    border-radius: 50%;
+    vertical-align: middle;
+    font-family: iconfont;
+    font-size: 70px;
+    font-style: normal;
+    color: #fff;
+}
+
+
+
+#protfolio {
+    background-color: #f7f7f7;
+    padding-bottom: 120px;
+}
+
+.protfolio-items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.protfolio-items > .protfolio-item {
+    width: 370px;
+    background-color: #fff;
+    margin-bottom: 30px;
+}
+
+.protfolio-item > .profolio-item-image > img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+
+
+.timeline {
+    position: relative;
+
+}
+
+.timeline > .about-item {
+    padding-bottom: 120px;
+}
+
+.timeline:before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    background-color: #f1f1f1;
+    top: 0;
+    bottom: 0;
+}
+
+.timeline > .about-item > .timeline-image {
+    position: absolute;
+    width: 170px;
+    height: 170px;
+    border: 8px solid #f1f1f1;
+    border-radius: 50%;
+    left: 50%;
+    margin-left: -85px;
+    background-color: #fed136;
+    color: #fff;
+}
+
+.about-item > .timeline-image > img {
+    width: 100%;
+    border-radius: inherit;
+}
+
+.about-item > .timeline-panel {
+    padding-right: 700px;
+    text-align: right;
+}
+
+.about-item:nth-child(even) > .timeline-panel {
+    padding-left: 700px;
+    padding-right: 0;
+    text-align: left;
+}
+
+.about-item:last-child > .timeline-image > h4 {
+    margin-top: 50px;
+}
+
+
+
+#team {
+    background-color: #f7f7f7;
+}
+
+.team-items {
+    display: flex;
+    justify-content: space-around;
+}
+
+.team-items .team-item-image {
+    width: 220px;
+    border: 7px solid #fff;
+    border-radius: 50%;
+}
+
+.list-inline {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.list-inline .icon-share {
+    display: inline-block;
+    width: 45px;
+    line-height: 45px;
+    border-radius: 50%;
+    background-color: #000;
+    color: #fff;
+    font-family: iconfont;
+    font-size: 25px;
+    margin: 0 5px;
+}
+
+.list-inline .icon-share:hover {
+    background-color: #fed136;
+}
+
+.team-intro {
+    padding: 10px 200px 0;
+}
+
+
+
+.clients .clients-items {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 20px;
+    font-size: 0;
+}
+
+
+
+#contact {
+    background-image: url(http://book.jirengu.com/jirengu-inc/jrg-tehui/homework/%E8%8B%A5%E6%84%9A/16/img/header-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-color: #222;
+}
+
+#contact .section-heading {
+    color: #fff;
+}
+
+.contactForm > .contactForm-left {
+    float: left;
+    width: 50%;
+    padding: 0 10px;
+}
+
+.contactForm > .contactForm-right {
+    float: right;
+    width: 50%;
+    padding: 0 10px;
+}
+
+.contactForm .form-group {
+    display: block;
+    width: 100%;
+    background-color: blue;
+    padding: 20px;
+    margin-bottom: 25px;
+    font-size: 14px;
+    color: #555;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    resize: none;
+}
+
+.contactForm .form-group::placeholder {
+    color: #bbb;
+    text-transform: uppercase;
+}
+
+
+.contactForm textarea.form-group {
+    height: 227px;
+}
+
+.contactForm > .contactForm-submit {
+    clear: both;
+}
+
+
+
+footer {
+    padding: 25px 0;
+    text-align: center;
+}
+
+footer .layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .layout > div {
+    width: 33.33333%;
+}
+
+footer .quicklinks {
+    display: flex;
+    justify-content: center;
+}
+
+footer .quicklinks a {
+    color: #fed136;
+    margin: 0 10px;
+}
+
+footer .quicklinks a:hover {
+    text-decoration: underline;
+}
