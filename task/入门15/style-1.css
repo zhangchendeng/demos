@@ -178,10 +178,34 @@ section .section-subheading {
     margin-bottom: 30px;
 }
 
-.protfolio-item > .profolio-item-image > img {
+.protfolio-item > .profolio-item-link {
+    position: relative;
+    display: block;
+}
+
+.protfolio-item > .profolio-item-link > .profolio-item-image {
     width: 100%;
     vertical-align: middle;
 }
+
+.protfolio-item > .profolio-item-link > .profolio-item-hover {
+    display: none;
+}
+
+.protfolio-item > .profolio-item-link:hover > .profolio-item-hover {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(254, 209, 54, .7);
+    font-family: iconfont;
+    font-size: 40px;
+    color: #fff;
+    padding-top: 100px; 
+}
+
+
 
 
 
